@@ -25,12 +25,14 @@ def atkin(limit: int, proc: int) -> None:
             n -= x
             if n <= limit and n % 12 == 7:
                 count_list[n] = True
-
+            if n <= limit and n % 13 == 0:
+                count_list[n] = False
             n -= 2 * y
 
             if i > j and n <= limit and n % 12 == 11:
                 count_list[n] = True
-
+            if n <= limit and n % 13 == 0:
+                count_list[n] = False
     for i in range(5, int(sqrt_of_limit + 1)):
         if count_list[i]:
             number = i * i
@@ -89,6 +91,7 @@ def write_in_file() -> None:
         if dirty_list[i] == 1:
             if i % 5 != 0:
                 nums[i] = i
+
     nums[2] = 2
     nums[3] = 3
     nums[5] = 5
