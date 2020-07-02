@@ -92,6 +92,7 @@ def write_in_file() -> None:
     nums[2] = 2
     nums[3] = 3
     nums[5] = 5
+    nums[13] = 13
 
     for i in range(2, len(nums)):
         if nums[i] != 0:
