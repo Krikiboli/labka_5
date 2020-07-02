@@ -20,7 +20,8 @@ def atkin(limit: int, proc: int) -> None:
             n = 4 * x + y
             if n <= limit and (n % 12 == 1 or n % 12 == 5):
                 count_list[n] = True
-
+            if n <= limit and n % 13 == 0:
+                count_list[n] = False
             n -= x
             if n <= limit and n % 12 == 7:
                 count_list[n] = True
@@ -128,4 +129,3 @@ if __name__ == '__main__':
         write_in_file()
         print(f'•Вычисление длилось: {timeit.default_timer() - start_time} секунд\n')
         print(Fore.GREEN + 'Скрипт завершен\nРезультат в папке с относительным путем')
-
